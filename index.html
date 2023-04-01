@@ -1,218 +1,204 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>navigation</title>
-    <link rel="stylesheet" href="./css/Index.css">
-	<link rel="shortcut icon" href="images/favicon.png"/>
-    <script>
-        //LISTEN ENTER KEYDOWN EVENT
-        document.onkeydown = function(e){
-            if(!e){
-                e = window.event;
+    <head>
+        <meta charset="UTF-8">
+        <title>navigation</title>
+        <link rel="stylesheet" href="./css/Index.css">
+        <link rel="shortcut icon" href="images/favicon.png"/>
+        <script>
+            //LISTEN ENTER KEYDOWN EVENT
+            document.onkeydown = function (e) {
+                if (!e) {
+                    e = window.event;
+                }
+                if ((e.keyCode || e.which) == 13) {
+                    do_search();
+                }
             }
-            if((e.keyCode || e.which) == 13){
-                do_search();
+
+            //DO SEARCH EVENT
+            function do_baidu_search() {
+                var search_txt = document.getElementById("search-bar-input").value;
+                var search_url = "https://www.baidu.com/s?ie=UTF-8&wd=" + search_txt;
+                window.open(search_url);
             }
-        }
 
-        //DO SEARCH EVENT
-        function do_baidu_search() {
-            var search_txt = document.getElementById("search-bar-input").value;
-            var search_url = "https://www.baidu.com/s?ie=UTF-8&wd=" + search_txt;
-            window.open(search_url);
-        }
-        function do_google_search() {
-            var search_txt = document.getElementById("search-bar-input").value;
-            var search_url = "https://www.google.com.hk/search?newwindow=1&hl=zh-CN&q=" + search_txt;
-            window.open(search_url);
-        }
-		function on_enter_key(){
-			if (event.keyCode==13){
-				var search_txt = document.getElementById("search-bar-input").value;
-				if (search_txt == "") {
-					alert("search text is empty ! ");
-					return false;
-				}
-				var search_url = "https://www.baidu.com/s?ie=UTF-8&wd=" + search_txt;
-				window.open(search_url);
-			}
-		}
-    </script>
-</head>
-<body>
+            function do_google_search() {
+                var search_txt = document.getElementById("search-bar-input").value;
+                var search_url = "https://www.google.com.hk/search?newwindow=1&hl=zh-CN&q=" + search_txt;
+                window.open(search_url);
+            }
 
-<!---------------------------------------------------------------------------------------------------->
+            function on_enter_key() {
+                if (event.keyCode == 13) {
+                    var search_txt = document.getElementById("search-bar-input").value;
+                    if (search_txt == "") {
+                        alert("search text is empty ! ");
+                        return false;
+                    }
+                    var search_url = "https://www.baidu.com/s?ie=UTF-8&wd=" + search_txt;
+                    window.open(search_url);
+                }
+            }
+        </script>
+    </head>
+    <body>
 
-<div id="logo">
-    <img src="./images/Logo.png" alt="tojohnonly">
-</div>
+        <!---------------------------------------------------------------------------------------------------->
 
-<!---------------------------------------------------------------------------------------------------->
-<div id="search-bar">
-    <input id="search-bar-input"  onkeydown="on_enter_key()" type="text" placeholder="search everything ..." autocomplete="off">
-	<button style="margin-left: 185px;" onclick="do_baidu_search()">Baidu</button><a class="close"></a>
-	<button onclick="do_google_search()">Google</button><a class="close"></a>
-</div>
+        <div id="logo">
+            <img src="./images/Logo.png" alt="tojohnonly">
+        </div>
 
-<!---------------------------------------------------------------------------------------------------->
-<div id="nav-panel">
+        <!---------------------------------------------------------------------------------------------------->
+        <div id="search-bar">
+            <input id="search-bar-input" onkeydown="on_enter_key()" type="text" placeholder="search everything ..."
+                   autocomplete="off">
+            <button style="margin-left: 185px;" onclick="do_baidu_search()">Baidu</button>
+            <a class="close"></a>
+            <button onclick="do_google_search()">Google</button>
+            <a class="close"></a>
+        </div>
 
-    <a class="nav-panel-item" title="百度网盘" href="https://pan.baidu.com/disk/main" target="_blank">
-    <img src="./images/web_icons/baiduPan.jpg"  height="16" width="16" class="nav-panel-item-img">
-    <div class="nav-panel-item-txt">百度网盘</div>
-    </a>
-    <a class="nav-panel-item" title="新浪微博" href="https://weibo.com/" target="_blank">
-        <img src="./images/web_icons/Weibo.png" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">新浪微博</div>
-    </a>
-    <a class="nav-panel-item" title="V2ex" href="https://www.v2ex.com/" target="_blank">
-        <img src="./images/web_icons/v2ex.png" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">V2ex</div>
-    </a>
-    <a class="nav-panel-item" title="douban" href="https://www.douban.com/" target="_blank">
-        <img src="./images/web_icons/douban.png"  height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">豆瓣</div>
-    </a>
-	 <a class="nav-panel-item" title="TieBa" href="https://tieba.baidu.com/index.html" target="_blank">
-        <img src="./images/web_icons/tieba.ico" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">TieBa</div>
-    </a>
+        <!---------------------------------------------------------------------------------------------------->
+        <div id="nav-panel">
 
-   
-   
-
-   
-    <a class="nav-panel-item" title="HostLoc" href="https://www.hostloc.com/forum.php" target="_blank">
-        <img src="./images/web_icons/hostLoc.png" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">HostLoc</div>
-    </a>
-
-    <a class="nav-panel-item" title="ipt" href="https://iptorrents.com/seeding_required.php" target="_blank">
-    <img src="./images/web_icons/ipt.ico"  height="16" width="16" class="nav-panel-item-img">
-    <div class="nav-panel-item-txt">IPT</div>
-    </a>
-
-    <a class="nav-panel-item" title="AvistaZ" href="https://avistaz.to/" target="_blank">
-        <img src="./images/web_icons/avistaz-favicon.png" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">AvistaZ</div>
-    </a>
-
-    <a class="nav-panel-item" title="HD4Fans" href="https://pt.hd4fans.org/torrents.php" target="_blank">
-        <img src="./images/web_icons/hd4fans.ico" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">HD4Fans</div>
-    </a>
-
-    <a class="nav-panel-item" title="HDSky" href="https://hdsky.me/index.php" target="_blank">
-        <img src="./images/web_icons/hdsky.ico"  height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">HDSky</div>
-    </a>
+            <a class="nav-panel-item" title="百度网盘" href="https://pan.baidu.com/disk/main" target="_blank">
+                <img src="./images/web_icons/baiduPan.jpg" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">百度网盘</div>
+            </a>
+            <a class="nav-panel-item" title="新浪微博" href="https://weibo.com/" target="_blank">
+                <img src="./images/web_icons/Weibo.png" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">新浪微博</div>
+            </a>
+            <a class="nav-panel-item" title="V2ex" href="https://www.v2ex.com/" target="_blank">
+                <img src="./images/web_icons/v2ex.png" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">V2ex</div>
+            </a>
+            <a class="nav-panel-item" title="douban" href="https://www.douban.com/" target="_blank">
+                <img src="./images/web_icons/douban.png" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">豆瓣</div>
+            </a>
+            <a class="nav-panel-item" title="TieBa" href="https://tieba.baidu.com/index.html" target="_blank">
+                <img src="./images/web_icons/tieba.ico" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">TieBa</div>
+            </a>
 
 
+            <a class="nav-panel-item" title="HostLoc" href="https://www.hostloc.com/forum.php" target="_blank">
+                <img src="./images/web_icons/hostLoc.png" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">HostLoc</div>
+            </a>
+            <a class="nav-panel-item" title="ipt" href="https://iptorrents.com/seeding_required.php" target="_blank">
+                <img src="./images/web_icons/ipt.ico" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">IPT</div>
+            </a>
+            <a class="nav-panel-item" title="AvistaZ" href="https://avistaz.to/" target="_blank">
+                <img src="./images/web_icons/avistaz-favicon.png" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">AvistaZ</div>
+            </a>
+            <a class="nav-panel-item" title="HD4Fans" href="https://pt.hd4fans.org/torrents.php" target="_blank">
+                <img src="./images/web_icons/hd4fans.ico" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">HD4Fans</div>
+            </a>
+            <a class="nav-panel-item" title="HDSky" href="https://hdsky.me/index.php" target="_blank">
+                <img src="./images/web_icons/hdsky.ico" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">HDSky</div>
+            </a>
 
 
-
-    <a class="nav-panel-item" title="CHDBits" href="https://chdbits.co/torrents.php?cat=401" target="_blank">
-        <img src="./images/web_icons/CHDBits.ico" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">CHDBits</div>
-    </a>
-	 <a class="nav-panel-item" title="SpringSunDay" href="https://springsunday.net/" target="_blank">
-        <img src="./images/web_icons/ssd.ico" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">SpringSunDay</div>
-    </a>
-   
-    <a class="nav-panel-item" title="TTG" href="https://totheglory.im/browse.php?c=M" target="_blank">
-        <img src="./images/web_icons/TTG.ico" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">TTG</div>
-    </a>
-    <a class="nav-panel-item" title="openCD" href="https://open.cd/" target="_blank">
-        <img src="./images/web_icons/openCD.ico" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">OpenCD</div>
-    </a>
-
-
-
-
-    <a class="nav-panel-item" title="Inoreader" href="https://www.inoreader.com/" target="_blank">
-        <img src="./images/web_icons/inoreader.ico"  height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">Inoreader</div>
-    </a>
-
-    <a class="nav-panel-item" title="浮墨笔记" href="https://v.flomoapp.com/mine" target="_blank">
-        <img src="./images/web_icons/flomo.jpg" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">浮墨笔记</div>
-    </a>
-    <a class="nav-panel-item" title="NFcloud" href="https://nfcloud.one/user" target="_blank">
-        <img src="./images/web_icons/sdyun.png" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">NFcloud</div>
-    </a>
-    <a class="nav-panel-item" title="ByWave" href="https://console.bywa.art/cart.php" target="_blank">
-        <img src="./images/web_icons/bywave.jpg" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">ByWave</div>
-    </a>
-    <a class="nav-panel-item" title="Pt" href="https://pt.codage.info" target="_blank">
-        <img src="./images/web_icons/pt.jpg" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">PT</div>
-    </a>
+            <a class="nav-panel-item" title="CHDBits" href="https://chdbits.co/torrents.php?cat=401" target="_blank">
+                <img src="./images/web_icons/CHDBits.ico" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">CHDBits</div>
+            </a>
+            <a class="nav-panel-item" title="SpringSunDay" href="https://springsunday.net/" target="_blank">
+                <img src="./images/web_icons/ssd.ico" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">SpringSunDay</div>
+            </a>
+            <a class="nav-panel-item" title="TTG" href="https://totheglory.im/browse.php?c=M" target="_blank">
+                <img src="./images/web_icons/TTG.ico" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">TTG</div>
+            </a>
+            <a class="nav-panel-item" title="openCD" href="https://open.cd/" target="_blank">
+                <img src="./images/web_icons/openCD.ico" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">OpenCD</div>
+            </a>
+            <a class="nav-panel-item" title="Inoreader" href="https://www.inoreader.com/" target="_blank">
+                <img src="./images/web_icons/inoreader.ico" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">Inoreader</div>
+            </a>
 
 
-    <a class="nav-panel-item" title="File" href="https://pan.codage.info" target="_blank">
-        <img src="./images/web_icons/frp.jpg" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">File</div>
-    </a>
-    <a class="nav-panel-item" title="静水流深" href="https://geekboy.org/" target="_blank">
-        <img src="./images/web_icons/geekboy.png" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">静水流深</div>
-    </a>
-    <a class="nav-panel-item" title="Coding" href="https://blog.codage.info/" target="_blank">
-        <img src="./images/web_icons/wiki.jpg" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">Coding</div>
-    </a>
-    <a class="nav-panel-item" title="博客园" href="https://www.cnblogs.com/coderzhw/" target="_blank">
-        <img src="./images/web_icons/cnblog.png"  height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">博客园</div>
-    </a>
-    <a class="nav-panel-item" title="LeetCode" href="https://leetcode-cn.com/problemset/all/" target="_blank">
-        <img src="./images/web_icons/leetcode.png" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">LeetCode</div>
-    </a>
+            <a class="nav-panel-item" title="浮墨笔记" href="https://v.flomoapp.com/mine" target="_blank">
+                <img src="./images/web_icons/flomo.jpg" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">浮墨笔记</div>
+            </a>
+            <a class="nav-panel-item" title="NFcloud" href="https://nfcloud.one/user" target="_blank">
+                <img src="./images/web_icons/sdyun.png" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">NFcloud</div>
+            </a>
+            <a class="nav-panel-item" title="ByWave" href="https://console.bywa.art/cart.php" target="_blank">
+                <img src="./images/web_icons/bywave.jpg" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">ByWave</div>
+            </a>
+            <a class="nav-panel-item" title="Pt" href="https://pt.codage.info" target="_blank">
+                <img src="./images/web_icons/pt.jpg" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">PT</div>
+            </a>
+            <a class="nav-panel-item" title="File" href="https://pan.codage.info" target="_blank">
+                <img src="./images/web_icons/frp.jpg" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">File</div>
+            </a>
 
-    <a class="nav-panel-item" title="知识星球" href="https://wx.zsxq.com/dweb2/index/files" target="_blank">
-        <img src="./images/web_icons/space.png"  height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">知识星球</div>
-    </a>
-    <a class="nav-panel-item" title="极客时间" href="https://time.geekbang.org/dashboard/course" target="_blank">
-        <img src="./images/web_icons/geek.png"  height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">极客时间</div>
-    </a>
-    <a class="nav-panel-item" title="百度统计" href="https://tongji.baidu.com/web/welcome/login" target="_blank">
-    <img src="./images/web_icons/tj.png"  height="16" width="16" class="nav-panel-item-img">
-    <div class="nav-panel-item-txt">百度统计</div>
-    </a>
-    <a class="nav-panel-item" title="腾讯云" href="https://cloud.tencent.com/login" target="_blank">
-        <img src="./images/web_icons/cos.png" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">腾讯云</div>
-    </a>
-    <a class="nav-panel-item" title="weread" href="https://weread.qq.com/" target="_blank">
-        <img src="./images/web_icons/weread.png" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">微信读书</div>
-    </a>
+            <a class="nav-panel-item" title="静水流深" href="https://geekboy.org/" target="_blank">
+                <img src="./images/web_icons/geekboy.png" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">静水流深</div>
+            </a>
+            <a class="nav-panel-item" title="Coding" href="https://blog.codage.info/" target="_blank">
+                <img src="./images/web_icons/wiki.jpg" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">Coding</div>
+            </a>
+            <a class="nav-panel-item" title="博客园" href="https://www.cnblogs.com/coderzhw/" target="_blank">
+                <img src="./images/web_icons/cnblog.png" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">博客园</div>
+            </a>
+            <a class="nav-panel-item" title="LeetCode" href="https://leetcode-cn.com/problemset/all/" target="_blank">
+                <img src="./images/web_icons/leetcode.png" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">LeetCode</div>
+            </a>
+
+            <a class="nav-panel-item" title="知识星球" href="https://wx.zsxq.com/dweb2/index/files" target="_blank">
+                <img src="./images/web_icons/space.png" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">知识星球</div>
+            </a>
 
 
+            <a class="nav-panel-item" title="极客时间" href="https://time.geekbang.org/dashboard/course" target="_blank">
+                <img src="./images/web_icons/geek.png" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">极客时间</div>
+            </a>
+            <a class="nav-panel-item" title="百度统计" href="https://tongji.baidu.com/web/welcome/login" target="_blank">
+                <img src="./images/web_icons/tj.png" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">百度统计</div>
+            </a>
+            <a class="nav-panel-item" title="腾讯云" href="https://cloud.tencent.com/login" target="_blank">
+                <img src="./images/web_icons/cos.png" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">腾讯云</div>
+            </a>
+            <a class="nav-panel-item" title="weread" href="https://weread.qq.com/" target="_blank">
+                <img src="./images/web_icons/weread.png" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">微信读书</div>
+            </a>
+            <a class="nav-panel-item" title="MindMaster" href="https://mm.edrawsoft.cn/create" target="_blank">
+                <img src="./images/web_icons/mindmaster.svg" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">MindMaster</div>
+            </a>
 
 
-    <a class="nav-panel-item" title="MindMaster" href="https://mm.edrawsoft.cn/create" target="_blank">
-        <img src="./images/web_icons/mindmaster.svg"  height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">MindMaster</div>
-    </a>
-    <a class="nav-panel-item" title="EdrawMax" href="https://www.edrawmax.cn/online/" target="_blank">
-        <img src="./images/web_icons/max.png"  height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">EdrawMax</div>
-    </a>
-    <a class="nav-panel-item" title="boox" href="https://send2boox.com/#/notes/newNotes" target="_blank">
-        <img src="./images/web_icons/boox.ico" height="16" width="16" class="nav-panel-item-img">
-        <div class="nav-panel-item-txt">Boox</div>
-    </a>
-</div>
-</body>
+            <a class="nav-panel-item" title="EdrawMax" href="https://www.edrawmax.cn/online/" target="_blank">
+                <img src="./images/web_icons/max.png" height="16" width="16" class="nav-panel-item-img">
+                <div class="nav-panel-item-txt">EdrawMax</div>
+            </a>
+        </div>
+    </body>
 </html>
