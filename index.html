@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>navigation</title>
         <link rel="stylesheet" href="./css/Index.css">
         <link rel="shortcut icon" href="images/favicon.png"/>
@@ -54,132 +55,130 @@
         <div id="search-bar">
             <input id="search-bar-input" onkeydown="on_enter_key()" type="text" placeholder="search everything ..."
                    autocomplete="off">
-            <button style="margin-left: 185px;" onclick="do_baidu_search()">Baidu</button>
-            <a class="close"></a>
+            <button onclick="do_baidu_search()">Baidu</button>
             <button onclick="do_google_search()">Google</button>
-            <a class="close"></a>
         </div>
 
         <!---------------------------------------------------------------------------------------------------->
         <div id="nav-panel">
 
             <a class="nav-panel-item" title="百度网盘" href="https://pan.baidu.com/disk/main" target="_blank">
-                <img src="./images/web_icons/baiduPan.jpg" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/baiduPan.jpg" alt="百度网盘" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">百度网盘</div>
             </a>
             <a class="nav-panel-item" title="新浪微博" href="https://weibo.com/" target="_blank">
-                <img src="./images/web_icons/Weibo.png" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/Weibo.png" alt="新浪微博" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">新浪微博</div>
             </a>
 
             <a class="nav-panel-item" title="douban" href="https://www.douban.com/" target="_blank">
-                <img src="./images/web_icons/douban.png" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/douban.png" alt="豆瓣" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">豆瓣</div>
             </a>
             <a class="nav-panel-item" title="Bilibili" href="https://www.bilibili.com/" target="_blank">
-                <img src="./images/web_icons/bilibili.jpeg" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/bilibili.jpeg" alt="Bilibili" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">Bilibili</div>
             </a>
 
             <a class="nav-panel-item" title="ipt" href="https://iptorrents.com/seeding_required.php" target="_blank">
-                <img src="./images/web_icons/ipt.ico" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/ipt.ico" alt="IPT" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">IPT</div>
             </a>
             <a class="nav-panel-item" title="AvistaZ" href="https://avistaz.to/" target="_blank">
-                <img src="./images/web_icons/avistaz-favicon.png" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/avistaz-favicon.png" alt="AvistaZ" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">AvistaZ</div>
             </a>
         
             <a class="nav-panel-item" title="CHDBits" href="https://chdbits.xyz/index.php" target="_blank">
-                <img src="./images/web_icons/CHDBits.ico" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/CHDBits.ico" alt="CHDBits" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">CHDBits</div>
             </a>
             <a class="nav-panel-item" title="SpringSunDay" href="https://springsunday.net/" target="_blank">
-                <img src="./images/web_icons/ssd.ico" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/ssd.ico" alt="SpringSunDay" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">SpringSunDay</div>
             </a>
             <a class="nav-panel-item" title="TTG" href="https://totheglory.im/browse.php?c=M" target="_blank">
-                <img src="./images/web_icons/TTG.ico" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/TTG.ico" alt="TTG" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">TTG</div>
             </a>
             <a class="nav-panel-item" title="openCD" href="https://open.cd/" target="_blank">
-                <img src="./images/web_icons/openCD.ico" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/openCD.ico" alt="OpenCD" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">OpenCD</div>
             </a>
             <a class="nav-panel-item" title="Yarr" href="https://read.codage.info/" target="_blank">
-                <img src="./images/web_icons/inoreader.ico" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/inoreader.ico" alt="Yarr" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">Yarr</div>
             </a>
             <a class="nav-panel-item" title="weread" href="https://weread.qq.com/" target="_blank">
-                <img src="./images/web_icons/weread.png" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/weread.png" alt="微信读书" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">微信读书</div>
             </a>
             <a class="nav-panel-item" title="浮墨笔记" href="https://v.flomoapp.com/mine" target="_blank">
-                <img src="./images/web_icons/flomo.jpg" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/flomo.jpg" alt="浮墨笔记" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">浮墨笔记</div>
             </a>
             <a class="nav-panel-item" title="Flower" href="https://huacloud.dev/" target="_blank">
-                <img src="./images/web_icons/sdyun.png" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/sdyun.png" alt="Flower" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">Flower</div>
             </a>
             <a class="nav-panel-item" title="Pt" href="https://pt.codage.info" target="_blank">
-                <img src="./images/web_icons/pt.jpg" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/pt.jpg" alt="PT" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">PT</div>
             </a>
 
             <a class="nav-panel-item" title="静水流深" href="https://blog.geekboy.org/" target="_blank">
-                <img src="./images/web_icons/geekboy.png" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/geekboy.png" alt="静水流深" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">静水流深</div>
             </a>
             <a class="nav-panel-item" title="博客园" href="https://www.cnblogs.com/coderzhw/" target="_blank">
-                <img src="./images/web_icons/cnblog.png" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/cnblog.png" alt="博客园" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">博客园</div>
             </a>
             <a class="nav-panel-item" title="LeetCode" href="https://leetcode-cn.com/problemset/all/" target="_blank">
-                <img src="./images/web_icons/leetcode.png" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/leetcode.png" alt="LeetCode" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">LeetCode</div>
             </a>
 
             <a class="nav-panel-item" title="statCounter" href="https://statcounter.com/" target="_blank">
-                <img src="./images/web_icons/tj.png" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/tj.png" alt="statCounter" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">statCounter</div>
             </a>
             <a class="nav-panel-item" title="umami" href="https://cloud.umami.is/analytics/eu/websites" target="_blank">
-                <img src="./images/web_icons/umami.png" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/umami.png" alt="umami" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">umami</div>
             </a>
             <a class="nav-panel-item" title="腾讯云" href="https://cloud.tencent.com/login" target="_blank">
-                <img src="./images/web_icons/cos.png" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/cos.png" alt="腾讯云" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">腾讯云</div>
             </a>
 
             <a class="nav-panel-item" title="MindMaster" href="https://mm.edrawsoft.cn/create" target="_blank">
-                <img src="./images/web_icons/mindmaster.svg" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/mindmaster.svg" alt="MindMaster" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">MindMaster</div>
             </a>
 
 
             <a class="nav-panel-item" title="EdrawMax" href="https://www.edrawmax.cn/online/" target="_blank">
-                <img src="./images/web_icons/max.png" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/max.png" alt="EdrawMax" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">EdrawMax</div>
             </a>
 
             <a class="nav-panel-item" title="V2ex" href="https://www.v2ex.com/" target="_blank">
-                <img src="./images/web_icons/v2ex.png" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/v2ex.png" alt="V2ex" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">V2ex</div>
             </a>
             <a class="nav-panel-item" title="linuxDo" href="https://linux.do/" target="_blank">
-                <img src="./images/web_icons/linux.do.jpeg" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/linux.do.jpeg" alt="Linux.Do" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">Linux.Do</div>
             </a>
 
             <a class="nav-panel-item" title="Pocket Casts" href="https://pocketcasts.com/" target="_blank">
-                <img src="./images/web_icons/castbox.jpg" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/castbox.jpg" alt="Pocket Casts" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">Pocket Casts</div>
             </a>
 
             <a class="nav-panel-item" title="Canva" href="https://www.canva.cn/" target="_blank">
-                <img src="./images/web_icons/Canva_icon.svg" height="16" width="16" class="nav-panel-item-img">
+                <img src="./images/web_icons/Canva_icon.svg" alt="Canva" class="nav-panel-item-img">
                 <div class="nav-panel-item-txt">Canva</div>
             </a>
 
