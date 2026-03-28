@@ -177,16 +177,16 @@ body{
     margin-top: 40px;
     margin-bottom: 50px;
     width: 100%;
-    max-width: 950px;
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
-    padding: 24px;
+    padding: 20px;
     background: var(--bg-glass);
     border: 1px solid rgba(255,255,255,0.5);
     border-radius: var(--radius-lg);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 16px;
+    gap: 12px;
     backdrop-filter: blur(20px);
     box-shadow: var(--shadow-lg), 0 0 40px rgba(0,0,0,0.1);
     animation: fadeInUp 0.8s ease-out 0.4s both;
@@ -201,13 +201,15 @@ body{
 
 .nav-panel-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    height: 60px;
+    justify-content: center;
+    height: 90px;
     border: 1px solid rgba(255,255,255,0.3);
     text-decoration: none;
     color: #333;
     border-radius: var(--radius-md);
-    padding: 0 16px;
+    padding: 8px 4px;
     background: rgba(255,255,255,0.6);
     transition: all var(--transition-normal);
     position: relative;
@@ -237,24 +239,32 @@ body{
 }
 
 .nav-panel-item-img{
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     flex-shrink: 0;
     object-fit: contain;
-    transition: transform var(--transition-normal);
+    transition: transform 0.5s ease;
 }
 
 .nav-panel-item:hover .nav-panel-item-img {
-    transform: scale(1.15) rotate(5deg);
+    animation: iconSpin 0.6s ease;
+}
+
+@keyframes iconSpin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
 }
 
 .nav-panel-item-txt {
-    margin-left: 12px;
-    font-size: 14px;
+    margin-top: 6px;
+    margin-left: 0;
+    font-size: 12px;
     font-weight: 500;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 100%;
     transition: color var(--transition-fast);
 }
 
@@ -293,24 +303,25 @@ body{
 
     #nav-panel {
         padding: 16px;
-        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
         gap: 10px;
         border-radius: var(--radius-md);
     }
 
     .nav-panel-item {
-        height: 54px;
-        padding: 0 12px;
+        height: 80px;
+        padding: 6px 4px;
     }
 
     .nav-panel-item-img {
-        width: 22px;
-        height: 22px;
+        width: 28px;
+        height: 28px;
     }
 
     .nav-panel-item-txt {
-        font-size: 13px;
-        margin-left: 10px;
+        font-size: 11px;
+        margin-top: 5px;
+        margin-left: 0;
     }
 }
 
@@ -327,24 +338,25 @@ body{
     }
 
     #nav-panel {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-        padding: 12px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 15px;
     }
 
     .nav-panel-item {
-        height: 50px;
-        padding: 0 10px;
+        height: 85px;
+        padding: 8px 4px;
     }
 
     .nav-panel-item-img {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
     }
 
     .nav-panel-item-txt {
         font-size: 12px;
-        margin-left: 8px;
+        margin-top: 5px;
+        margin-left: 0;
     }
 
     #search-bar button {
@@ -353,13 +365,25 @@ body{
     }
 }
 
-/* 超小屏幕适配 */
-@media screen and (max-width: 360px) {
+/* 超小屏幕适配 (小于400px显示3个) */
+@media screen and (max-width: 400px) {
     #nav-panel {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        padding: 12px;
     }
 
     .nav-panel-item {
-        justify-content: center;
+        height: 80px;
+        padding: 6px 4px;
+    }
+
+    .nav-panel-item-img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .nav-panel-item-txt {
+        font-size: 11px;
     }
 }
